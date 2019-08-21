@@ -15,7 +15,7 @@
   <div class="actions">
     <div class="box">
       <p>
-        Returning customer? Great to have you back.
+        Returning customer? Great to have you back <%= @name.html_safe %>.
       </p>
 
       <%= form_tag sessions_path do %>
