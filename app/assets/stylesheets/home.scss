@@ -1,0 +1,42 @@
+main.home {
+  padding: 3rem;
+
+  label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    div {
+      flex: 0 7rem;
+      color: blue;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      flex: 1;
+      font-size: 14pt;
+      padding: 0.5rem;
+    }
+  }
+
+  input[type=submit] {
+    margin-top: 1rem;
+    font-size: 14pt;
+    background: blue;
+    color: white;
+    padding: 0.5rem 1rem;
+  }
+
+  .actions {
+    margin-top: 2rem;
+    display: flex;
+  }
+
+  .box {
+    flex: 0 20rem;
+    border: 1px solid blue;
+    padding: 3rem;
+    margin-right: 2rem;
+  }
+}

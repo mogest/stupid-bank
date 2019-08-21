@@ -1,0 +1,50 @@
+<header>
+  <div class="bank-header">
+    <span class="logo">SB</span>
+    <div class="tagline">
+      Your <span>Stupid Bank</span>, today.
+    </div>
+  </div>
+</header>
+
+<main class="home">
+  <p>
+    Welcome to Stupid Bank.  Every day, we put our customers ahead of our security.&trade;
+  </p>
+
+  <div class="actions">
+    <div class="box">
+      <p>
+        Returning customer? Great to have you back.
+      </p>
+
+      <%= form_tag sessions_path do %>
+        <%= label_tag do %>
+          <div>User ID</div>
+          <%= text_field_tag :id %>
+        <% end %>
+        <%= label_tag do %>
+          <div>PIN</div>
+          <%= password_field_tag :pin, '', maxlength: 8 %>
+        <% end %>
+
+        <%= submit_tag 'Log In' %>
+      <% end %>
+    </div>
+
+    <div class="box">
+      <p>
+        New customer?  Sign up with no identification required!
+      </p>
+
+      <%= form_for User.new do |f| %>
+        <%= label_tag do %>
+          <div>Your name</div>
+          <%= f.text_field :name %>
+        <% end %>
+
+        <%= submit_tag 'Create Bank Accounts' %>
+      <% end %>
+    </div>
+  </div>
+</main>

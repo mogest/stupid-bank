@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: Roboto;
+  font-size: 14pt;
+}
+
+header {
+  background-color: #ddf;
+  padding: 2rem;
+}
+
+.bank-header {
+  display: flex;
+  align-items: flex-end;
+
+  .logo {
+    display: inline-block;
+    font-family: Righteous;
+    font-style: italic;
+    font-size: 24pt;
+    background-color: yellow;
+    color: black;
+    border: 1rem solid blue;
+    padding: 0.5rem;
+    padding-right: 0.8rem;
+  }
+
+  .tagline {
+    margin-left: 1rem;
+    padding-bottom: 0.75rem;
+    flex: 1;
+    font-family: Roboto;
+    font-size: 18pt;
+    color: blue;
+
+    span {
+      font-family: Righteous;
+    }
+  }
+}
