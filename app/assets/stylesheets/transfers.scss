@@ -1,0 +1,21 @@
+main.transfers {
+  dt {
+    float: left;
+    width: 10rem;
+    text-align: right;
+    padding-right: 0.5rem;
+  }
+
+  dd {
+    padding-bottom: 1rem;
+  }
+
+  select {
+    font-size: 12pt;
+  }
+
+  input[type=text] {
+    font-size: 12pt;
+    padding: 0.5rem;
+  }
+}

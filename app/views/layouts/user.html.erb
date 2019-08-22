@@ -1,0 +1,11 @@
+<% content_for :content do %>
+  <%= content_tag :section, alert, class: 'alert' if alert %>
+  <%= content_tag :section, notice, class: 'notice' if notice %>
+
+  <div class="user-frame">
+    <%= render 'shared/nav' %>
+    <%= yield %>
+  </div>
+<% end %>
+
+<%= render template: 'layouts/application' %>

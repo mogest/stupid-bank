@@ -1,16 +1,13 @@
-<header>
-  <div class="bank-header">
-    <span class="logo">SB</span>
-    <div class="tagline">
-      Your <span>Stupid Bank</span>, today.
-    </div>
-  </div>
-</header>
-
 <main class="home">
-  <p>
-    Welcome to Stupid Bank.  Every day, we put our customers ahead of our security.&trade;
-  </p>
+  <% if alert %>
+    <p class="alert">
+      <%= alert %>
+    </p>
+  <% else %>
+    <p>
+      Welcome to Stupid Bank.  Every day, we put our customers ahead of our security.&trade;
+    </p>
+  <% end %>
 
   <div class="actions">
     <div class="box">

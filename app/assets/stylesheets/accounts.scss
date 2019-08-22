@@ -1,3 +1,42 @@
-// Place all the styles related to the accounts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+main.accounts, main.account {
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    padding: 0.75rem 1.5rem;
+  }
+
+  tr th {
+    background-color: #ccc;
+  }
+
+  tr:nth-child(odd) {
+    background-color: #eee;
+  }
+
+  tr:nth-child(even) {
+    background-color: #ddd;
+  }
+
+  td:last-child {
+    text-align: right;
+  }
+}
+
+main.account {
+  dt {
+    float: left;
+    width: 8rem;
+  }
+
+  dd {
+    font-weight: bold;
+  }
+
+  input[type=text] {
+    font-size: 14pt;
+    padding: 0.5rem;
+  }
+}

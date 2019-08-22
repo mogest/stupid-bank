@@ -1,0 +1,22 @@
+<nav>
+  <ul>
+    <li class="<%= "selected" if controller_name == 'accounts' %>">
+      <%= link_to 'Accounts', accounts_path %>
+    </li>
+    <li class="<%= "selected" if controller_name == 'transfers' %>">
+      <%= link_to 'Transfer money', new_transfers_path %>
+    </li>
+    <li class="<%= "selected" if controller_name == 'pay' %>">
+      <%= link_to 'Pay someone', new_pay_path %>
+    </li>
+    <li>
+      <%= link_to 'Send bank mail', accounts_path %>
+    </li>
+    <li>
+      <%= link_to 'Change your PIN', accounts_path %>
+    </li>
+    <li>
+      <%= link_to 'Logout', sessions_path, method: :delete %>
+    </li>
+  </ul>
+</nav>

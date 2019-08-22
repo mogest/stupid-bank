@@ -1,0 +1,34 @@
+<main class="account">
+  <dl>
+    <dt>Account</dt>
+    <dd><%= @account.account_number %></dd>
+
+    <dt>Description</dt>
+    <dd><%= @account.description %></dd>
+
+    <dt>Balance</dt>
+    <dd><%= number_to_currency @account.balance %></dd>
+  </dl>
+
+  <table>
+    <tr>
+      <th>Date/time</th>
+      <th>Description</th>
+      <th>Amount</th>
+    </tr>
+
+    <% @account.txns.ordered.each do |txn| %>
+      <tr>
+        <td><%= l txn.transaction_at %></td>
+        <td><%= txn.description %></td>
+        <td><%= number_to_currency txn.amount %></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <%= form_for @account do |f| %>
+    Change your account description to
+    <%= f.text_field :description %>
+    <%= f.submit 'Change' %>
+  <% end %>
+</main>

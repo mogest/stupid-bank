@@ -1,0 +1,21 @@
+<main class="created-user">
+  <p>
+    Welcome to Stupid Bank, <%= @user.name %>.  We're thrilled to have you with us.
+  </p>
+  
+  <p>
+    Your new account has been set up.  Please record your user details in a safe place.
+  </p>
+  
+  <dl>
+    <dt>User ID</dt>
+    <dd><%= @user.id %></dd>
+
+    <dt>PIN</dt>
+    <dd><%= @user.pin %></dd>
+  </dl>
+  
+  <%= form_tag accounts_path, method: :get do %>
+    <%= submit_tag 'Continue to your accounts page', name: '' %>
+  <% end %>
+</main>

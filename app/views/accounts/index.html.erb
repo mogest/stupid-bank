@@ -1,0 +1,21 @@
+<main class="accounts">
+  <p>
+    Welcome, <%= current_user.name %>.
+  </p>
+
+  <table>
+    <tr>
+      <th>Account</th>
+      <th>Description</th>
+      <th>Balance</th>
+    </tr>
+
+    <% @accounts.each do |account| %>
+      <tr>
+        <td><%= link_to account.account_number, account %></td>
+        <td><%= account.description %></td>
+        <td><%= number_to_currency account.balance %></td>
+      </tr>
+    <% end %>
+  </table>
+</main>

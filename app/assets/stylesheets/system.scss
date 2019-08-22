@@ -38,3 +38,69 @@ header {
     }
   }
 }
+
+input[type=submit] {
+  margin-top: 1rem;
+  font-size: 14pt;
+  background: blue;
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+.alert {
+  font-weight: bold;
+  color: red;
+}
+
+div.user-frame {
+  padding: 3rem;
+  display: flex;
+
+  nav {
+    flex: 0 15rem;
+    margin-right: 3rem;
+    background-color: #ddf;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      display: block;
+      background-color: #ddf;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      color: black;
+    }
+
+    li.selected a {
+      font-weight: bold;
+    }
+
+    a:hover {
+      background-color: #ccf;
+    }
+  }
+
+  main {
+    flex: 1;
+  }
+}
+
+section.alert, section.notice {
+  margin-top: 1rem;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+section.alert {
+  background-color: #fdd;
+  border: 1px solid red;
+}
+
+section.notice {
+  background-color: #aaf;
+  border: 1px solid blue;
+}

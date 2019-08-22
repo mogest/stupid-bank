@@ -1,0 +1,32 @@
+<main class="transfers">
+  <%= form_tag transfers_path do %>
+    <p>
+      Set up a transfer
+    </p>
+
+    <dl>
+      <dt>
+        from account
+      </dt>
+      <dd>
+        <%= select_tag 'from', options_for_select(@account_options), prompt: 'select...' %>
+      </dd>
+
+      <dt>
+        to account
+      </dt>
+      <dd>
+        <%= select_tag 'to', options_for_select(@account_options), prompt: 'select...' %>
+      </dd>
+
+      <dt>
+        the amount of
+      </dt>
+      <dd>
+        <%= text_field_tag :amount %>
+      </dd>
+    </dl>
+
+    <%= submit_tag 'Transfer Now' %>
+  <% end %>
+</main>

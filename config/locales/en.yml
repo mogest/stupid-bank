@@ -30,4 +30,15 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  time:
+    formats:
+        default: "%e %b %Y %-I:%M %p"
+        with_seconds: "%e %b %Y %-I:%M:%S %p"
+        short: "%-d %b '%y %-I:%M%p"
+        full: "%A, %-e %B %Y at %-I:%M %p"
+        full_date: "%A, %-e %B %Y"
+        full_time: "%-I:%M %p"
+  date:
+    formats:
+      default: "%e %b %Y"
+      short: "%e %B"

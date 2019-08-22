@@ -1,0 +1,51 @@
+<main class="transfers">
+  <%= form_tag pay_path do %>
+    <p>
+      Pay
+    </p>
+
+    <dl>
+      <dt>
+        from account
+      </dt>
+      <dd>
+        <%= select_tag 'from_account_id', options_for_select(@account_options, @pay.from_account_id), prompt: 'select...' %>
+      </dd>
+
+      <dt>
+        to account
+      </dt>
+      <dd>
+        <%= text_field_tag :to_account_number, @pay.to_account_number, placeholder: 'xx-xxxxxxx-xx' %>
+      </dd>
+
+      <dt>
+        the amount of
+      </dt>
+      <dd>
+        <%= text_field_tag :amount, @pay.amount %>
+      </dd>
+
+      <dt>
+        message on their account
+      </dt>
+      <dd>
+        <%= text_field_tag :their_message, @pay.their_message %>
+      </dd>
+
+      <dt>
+        message on your account
+      </dt>
+      <dd>
+        <%= text_field_tag :your_message, @pay.your_message %>
+      </dd>
+    </dl>
+
+    <p>
+      Payments will show immediately in the recipient's bank account.
+    </p>
+
+    <%= submit_tag 'Pay Now' %>
+  <% end %>
+</main>
+

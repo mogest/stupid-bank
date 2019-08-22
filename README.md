@@ -1,24 +1,12 @@
-# README
+# Stupid Bank
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Vulnerabilities to be found:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Session replay
+* Insecure use of untrusted data
+* CSRF
+* Non-atomic database operations
+* Unchecked access control
+* Reflected XSS
+* Persistent XSS
+* Data validation
