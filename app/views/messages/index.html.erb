@@ -1,0 +1,20 @@
+<main class="messages">
+  <p>
+    Admin access only.
+  </p>
+
+  <table>
+    <tr>
+      <th>Message subject</th>
+      <th>Customer name</th>
+      <th>Sent at</th>
+    </tr>
+    <% @messages.each do |message| %>
+      <tr>
+        <td><%= link_to message.subject, message %></td>
+        <td><%= message.user.name %></td>
+        <td><%= l message.created_at %></td>
+      </tr>
+    <% end %>
+  </table>
+</main>

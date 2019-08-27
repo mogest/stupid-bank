@@ -1,0 +1,20 @@
+<main class="message-new">
+  <% if @message.errors.any? %>
+    <p>
+      <%= @message.errors.full_messages.to_sentence %>
+    </p>
+  <% else %>
+    <p>
+      Send a message to our friendly team at Stupid Bank, and we'll
+      endevour to be obtuse in our response.
+    </p>
+  <% end %>
+
+  <%= form_for @message do |f| %>
+    <%= f.text_field :subject, placeholder: 'Subject' %>
+
+    <%= f.text_area :body %>
+
+    <%= f.submit 'Send Message' %>
+  <% end %>
+</main>

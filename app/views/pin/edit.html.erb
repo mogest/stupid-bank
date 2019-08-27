@@ -1,0 +1,26 @@
+<main class="pin-edit">
+  <% if @user.errors.any? %>
+    <p class="error">
+      <%# VULN : reflected XSS %>
+      <%= @user.pin.html_safe %>
+      is not a valid PIN number.
+    </p>
+  <% else %>
+    <p>
+      Use this facility to change your PIN number.
+    </p>
+  <% end %>
+
+  <p>
+    PIN numbers must be between 4 and 8 digits.
+  </p>
+
+  <%= form_tag pin_path, method: :put do %>
+    <p>
+      New PIN number
+      <%= text_field_tag :pin %>
+    </p>
+
+    <%= submit_tag 'Change PIN Number' %>
+  <% end %>
+</main>

@@ -1,0 +1,16 @@
+main.pin-edit {
+  form {
+    margin-top: 2rem;
+  }
+
+  input[type=text] {
+    font-size: 14pt;
+    padding: 0.5rem;
+    margin-left: 1rem;
+  }
+
+  .error {
+    font-weight: bold;
+    color: red;
+  }
+}

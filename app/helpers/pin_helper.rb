@@ -1,0 +1,2 @@
+module PinHelper
+end

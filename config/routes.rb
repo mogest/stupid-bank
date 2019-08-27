@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   resources :accounts
   resource :transfers
   resource :pay, controller: 'pay'
+  resources :messages
+  resource :pin, controller: 'pin', only: [:edit, :update]
 end

@@ -9,11 +9,11 @@
     <li class="<%= "selected" if controller_name == 'pay' %>">
       <%= link_to 'Pay someone', new_pay_path %>
     </li>
-    <li>
-      <%= link_to 'Send bank mail', accounts_path %>
+    <li class="<%= "selected" if controller_name == 'messages' %>">
+      <%= link_to 'Send bank mail', new_message_path %>
     </li>
-    <li>
-      <%= link_to 'Change your PIN', accounts_path %>
+    <li class="<%= "selected" if controller_name == 'pin' %>">
+      <%= link_to 'Change your PIN', edit_pin_path %>
     </li>
     <li>
       <%= link_to 'Logout', sessions_path, method: :delete %>

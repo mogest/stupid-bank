@@ -1,0 +1,21 @@
+<main class="message">
+  <dl>
+    <dt>Message ID</dt>
+    <dd><%= @message.id %></dd>
+
+    <dt>Customer name</dt>
+    <dd><%= @message.user.name %></dd>
+
+    <dt>Subject</dt>
+    <dd><%= @message.subject %></dd>
+
+    <dt>Sent at</dt>
+    <dd><%= l @message.created_at %></dd>
+  </dl>
+
+  <p>
+    Message body:
+  </p>
+  <%# VULN : unescaped user-supplied content %>
+  <article><%= @message.body.html_safe %></article>
+</main>
