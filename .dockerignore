@@ -1,0 +1,7 @@
+infrastructure
+tmp/cache/*
+tmp/pids/*
+tmp/sockets/*
+log/*
+*.env
+config/master.key

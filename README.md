@@ -10,3 +10,4 @@ Vulnerabilities to be found:
 * Reflected XSS
 * Persistent XSS
 * Data validation
+* No authentication limits

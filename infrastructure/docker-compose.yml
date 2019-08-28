@@ -1,0 +1,36 @@
+version: '3'
+services:
+  db:
+    image: postgres:10
+    restart: always
+    env_file:
+      - db.env
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  puma:
+    image: registry.gitlab.com/mogest/stupid-bank
+    restart: always
+    depends_on:
+      - db
+    env_file:
+      - rails.env
+      - db.env
+
+  caddy:
+    image: abiosoft/caddy
+    restart: always
+    env_file:
+      - caddy.env
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./Caddyfile:/etc/Caddyfile
+      - certs:/root/.caddy
+    depends_on:
+      - puma
+
+volumes:
+  certs:
+  pgdata:
