@@ -15,6 +15,7 @@ class ApplicationController < ActionController::Base
     @__current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 
+  helper_method :is_admin_user?
   def is_admin_user?
     # VULN : insecure use of untrusted data
     cookies[:admin]
