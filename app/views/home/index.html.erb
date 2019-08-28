@@ -18,11 +18,11 @@
       <%= form_tag sessions_path do %>
         <%= label_tag do %>
           <div>User ID</div>
-          <%= text_field_tag :id %>
+          <%= text_field_tag :id, '', autocomplete: 'off' %>
         <% end %>
         <%= label_tag do %>
           <div>PIN</div>
-          <%= password_field_tag :pin, '', maxlength: 8 %>
+          <%= password_field_tag :pin, '', maxlength: 8, autocomplete: 'off' %>
         <% end %>
 
         <%= submit_tag 'Log In' %>
@@ -37,7 +37,7 @@
       <%= form_for User.new do |f| %>
         <%= label_tag do %>
           <div>Your name</div>
-          <%= f.text_field :name %>
+          <%= f.text_field :name, autocomplete: 'off' %>
         <% end %>
 
         <%= submit_tag 'Create Bank Accounts' %>
