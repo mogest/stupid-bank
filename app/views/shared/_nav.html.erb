@@ -12,11 +12,13 @@
     <li class="<%= "selected" if controller_name == 'messages' %>">
       <%= link_to 'Send bank mail', new_message_path %>
     </li>
+
     <% if is_admin_user? %>
       <li class="<%= "selected" if controller_name == 'messages' %>">
         <%= link_to 'Read bank mail (ADMIN)', messages_path %>
       </li>
     <% end %>
+
     <li class="<%= "selected" if controller_name == 'pin' %>">
       <%= link_to 'Change your PIN', edit_pin_path %>
     </li>

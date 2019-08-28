@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
   helper_method :is_admin_user?
   def is_admin_user?
     # VULN : insecure use of untrusted data
-    cookies[:admin]
+    cookies[:admin] == 'true'
   end
 
   def log_in_user!(user)

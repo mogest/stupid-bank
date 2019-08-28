@@ -27,7 +27,7 @@ class MessagesController < ApplicationController
   private
 
   def ensure_admin_access
-    if cookies[:admin] != 'true'
+    if !is_admin_user?
       redirect_to accounts_path, alert: 'No access to this page.'
     end
   end
