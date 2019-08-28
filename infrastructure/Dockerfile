@@ -12,7 +12,7 @@ RUN adduser --system --no-create-home --home /app puma
 RUN gem update bundler
 RUN npm i -g yarn
 ADD Gemfile Gemfile.lock /app/
-RUN bundle install
+RUN bundle install --without development test
 ADD . /app
 RUN SECRET_KEY_BASE=doesnotmatter bundle exec rails assets:precompile
 RUN chown -R puma /app/tmp /app/db/schema.rb
