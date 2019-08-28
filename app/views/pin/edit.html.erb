@@ -18,7 +18,7 @@
   <%= form_tag pin_path, method: :put do %>
     <p>
       New PIN number
-      <%= text_field_tag :pin %>
+      <%= text_field_tag :pin, '', autocomplete: 'off' %>
     </p>
 
     <%= submit_tag 'Change PIN Number' %>

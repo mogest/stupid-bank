@@ -28,7 +28,7 @@
 
   <%= form_for @account do |f| %>
     Change your account description to
-    <%= f.text_field :description %>
+    <%= f.text_field :description, autocomplete: 'off' %>
     <%= f.submit 'Change' %>
   <% end %>
 </main>

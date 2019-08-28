@@ -11,7 +11,7 @@
   <% end %>
 
   <%= form_for @message do |f| %>
-    <%= f.text_field :subject, placeholder: 'Subject' %>
+    <%= f.text_field :subject, placeholder: 'Subject', autocomplete: 'off' %>
 
     <%= f.text_area :body %>
 

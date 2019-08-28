@@ -16,28 +16,28 @@
         to account
       </dt>
       <dd>
-        <%= text_field_tag :to_account_number, @pay.to_account_number, placeholder: 'xx-xxxxxxx-xx' %>
+        <%= text_field_tag :to_account_number, @pay.to_account_number, placeholder: 'xx-xxxxxxx-xx', autocomplete: 'off' %>
       </dd>
 
       <dt>
         the amount of
       </dt>
       <dd>
-        <%= text_field_tag :amount, @pay.amount %>
+        <%= text_field_tag :amount, @pay.amount, autocomplete: 'off' %>
       </dd>
 
       <dt>
         message on their account
       </dt>
       <dd>
-        <%= text_field_tag :their_message, @pay.their_message %>
+        <%= text_field_tag :their_message, @pay.their_message, autocomplete: 'off' %>
       </dd>
 
       <dt>
         message on your account
       </dt>
       <dd>
-        <%= text_field_tag :your_message, @pay.your_message %>
+        <%= text_field_tag :your_message, @pay.your_message, autocomplete: 'off' %>
       </dd>
     </dl>
 
