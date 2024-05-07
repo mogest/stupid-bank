@@ -14,7 +14,7 @@ test:
 
 production:
   <<: *default
-  database: stupid_bank
-  host: db
-  username: postgres
+  database: <%= ENV['POSTGRES_DATABASE'] %>
+  host: <%= ENV['POSTGRES_HOST'] %>
+  username: <%= ENV['POSTGRES_USERNAME'] %>
   password: <%= ENV['POSTGRES_PASSWORD'] %>
