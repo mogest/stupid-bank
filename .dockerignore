@@ -2,6 +2,8 @@ infrastructure
 tmp/cache/*
 tmp/pids/*
 tmp/sockets/*
+tmp/local_secret.key
 log/*
 *.env
 config/master.key
+db/*.sqlite3
