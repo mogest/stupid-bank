@@ -13,5 +13,5 @@ RUN bundle install --without development test
 ADD . /app
 RUN SECRET_KEY_BASE=doesnotmatter bundle exec rails assets:precompile
 RUN SECRET_KEY_BASE=doesnotmatter bundle exec rails db:migrate
-RUN chown -R puma /app/tmp /app/db
+RUN mkdir -p /app/tmp/pids && chown -R puma /app/tmp /app/db
 USER puma
