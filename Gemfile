@@ -1,14 +1,14 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.3.4'
+ruby '3.4.8'
 
-gem 'rails', '~> 7.1'
+gem 'rails', '~> 8.0'
 gem 'sqlite3'
 gem 'puma'
-gem 'sassc-rails'
+gem 'dartsass-rails'
 gem "bootsnap", require: false
-gem "sprockets-rails"
+gem "propshaft"
 gem "importmap-rails"
 
 group :development, :test do

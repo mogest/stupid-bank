@@ -10,39 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2019_08_27_081803) do
+ActiveRecord::Schema[8.1].define(version: 2019_08_27_081803) do
   create_table "accounts", force: :cascade do |t|
-    t.integer "user_id", null: false
     t.string "account_number", null: false
-    t.string "description", null: false
     t.datetime "created_at", null: false
+    t.string "description", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id", null: false
     t.index ["user_id"], name: "index_accounts_on_user_id"
   end
 
   create_table "messages", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.string "subject", null: false
     t.text "body", null: false
     t.datetime "created_at", null: false
+    t.string "subject", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id", null: false
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "txns", force: :cascade do |t|
     t.integer "account_id", null: false
-    t.datetime "transaction_at", precision: nil, null: false
-    t.string "description", null: false
     t.float "amount", null: false
     t.datetime "created_at", null: false
+    t.string "description", null: false
+    t.datetime "transaction_at", precision: nil, null: false
     t.datetime "updated_at", null: false
     t.index ["account_id"], name: "index_txns_on_account_id"
   end
 
   create_table "users", force: :cascade do |t|
+    t.datetime "created_at", null: false
     t.string "name", null: false
     t.string "pin", null: false
-    t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 end
